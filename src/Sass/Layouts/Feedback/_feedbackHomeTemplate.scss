@@ -1,0 +1,84 @@
+.chaCuaFeedBack {
+  //   position: relative;
+  .feedBack {
+    position: absolute;
+    right: 10%;
+    bottom: 3%;
+    position: fixed;
+    z-index: 2000; //??
+    .nutFeedback {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+      box-shadow: 0 5px 15px -5px #00000070;
+    }
+
+    .nutFeedback i {
+      transition: 0.2s linear;
+    }
+    .nutFeedback:hover i {
+      transform: scale(1.2);
+    }
+    .nutFeedback .fb {
+      transition: 0.2s linear;
+    }
+    .nutFeedback:hover .fb {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .chaCuaFeedBack {
+    //   position: relative;
+    .feedBack {
+      .nutFeedback {
+        width: 80px;
+        height: 80px;
+        .chuFeedback {
+          font-size: 32px;
+        }
+        .fb {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("large") {
+  .chaCuaFeedBack {
+    //   position: relative;
+    .feedBack {
+      .nutFeedback {
+        width: 75px;
+        height: 75px;
+        .chuFeedback {
+          font-size: 22px;
+        }
+        .fb {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .chaCuaFeedBack {
+    //   position: relative;
+    .feedBack {
+      .nutFeedback {
+        width: 70px;
+        height: 70px;
+        .chuFeedback {
+          font-size: 19px;
+        }
+        .fb {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

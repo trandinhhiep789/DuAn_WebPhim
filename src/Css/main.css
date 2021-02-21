@@ -91,7 +91,7 @@ ul, li {
 
 header {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   left: 0;
   background-color: white;
@@ -2425,6 +2425,81 @@ footer .footer__copyright .footer__info span:first-child {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+.chaCuaFeedBack .feedBack {
+  position: absolute;
+  right: 10%;
+  bottom: 3%;
+  position: fixed;
+  z-index: 2000;
+}
+
+.chaCuaFeedBack .feedBack .nutFeedback {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 15px -5px #00000070;
+          box-shadow: 0 5px 15px -5px #00000070;
+}
+
+.chaCuaFeedBack .feedBack .nutFeedback i {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.chaCuaFeedBack .feedBack .nutFeedback:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.chaCuaFeedBack .feedBack .nutFeedback .fb {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.chaCuaFeedBack .feedBack .nutFeedback:hover .fb {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1200px) {
+  .chaCuaFeedBack .feedBack .nutFeedback {
+    width: 80px;
+    height: 80px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .chuFeedback {
+    font-size: 32px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .fb {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .chaCuaFeedBack .feedBack .nutFeedback {
+    width: 75px;
+    height: 75px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .chuFeedback {
+    font-size: 22px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .fb {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .chaCuaFeedBack .feedBack .nutFeedback {
+    width: 70px;
+    height: 70px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .chuFeedback {
+    font-size: 19px;
+  }
+  .chaCuaFeedBack .feedBack .nutFeedback .fb {
+    font-size: 11px;
   }
 }
 
