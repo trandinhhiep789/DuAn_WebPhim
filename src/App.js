@@ -23,6 +23,9 @@ import QuanLyNguoiDung from './Page/Admin/User/QuanLyNguoiDung'
 import QuanLyPhim from './Page/Admin/Film/QuanLyPhim'
 import { Temlay } from './Template/Temlay';
 import { useSelector } from 'react-redux'
+import FeedBack from './Components/FeedBack';
+import FeedBackRun from './Components/FeedBackRun';
+
 
 
 function App() {
@@ -68,6 +71,7 @@ function App() {
 
           {/* eltr */}
 
+          <Route exact path='/feedbackrun' component={FeedBackRun} />
           {userLogin.maLoaiNguoiDung == "QuanTri" ?
             <Switch>
               <AdminTemplate exact path='/admin' Component={Admin} />,
@@ -79,7 +83,9 @@ function App() {
 
 
         </Switch>
+
       }
+
     </>
   );
 }

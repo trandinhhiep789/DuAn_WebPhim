@@ -5,6 +5,12 @@ import Footer from '../Components/Footer';
 import Header from "../Components/Header";
 // import Login from '../Page/User/Login';
 
+
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
+
+
+
 export const HomeTemplate = (props) => {
     let { Component, ...restParam } = props;
     return (
@@ -20,10 +26,13 @@ export const HomeTemplate = (props) => {
 
                                 <Footer />
                             </div>
-                            <div className="">
-                                <FeedBack />
-                            </div>
+
+                            <MessengerCustomerChat
+                                pageId="112035807606509"
+                                appId="199663805249114"
+                            />
                         </div>
+
 
                     </>
                 );

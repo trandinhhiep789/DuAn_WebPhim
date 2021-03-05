@@ -4,7 +4,7 @@ $color-white-0: #fff;
 $color-gray-0: #949494;
 $color-gray-1: #f6f6f6;
 
-$color-red-0: #fb4226; 
+$color-red-0: #fb4226;
 $color-red-1: #ce3017;
 $color-red-2: #fa5238;
 
@@ -15,17 +15,15 @@ $color-black-0: #000;
 $color-black-1: #4a4a4a;
 $color-black-2: #222222;
 
-
 //variable font size
-$fs-0: 10px;  
-$fs-1: 12px; 
+$fs-0: 10px;
+$fs-1: 12px;
 $fs-2: 14px; //default
 $fs-3: 16px;
 $fs-4: 18px;
 $fs-5: 24px;
 $fs-6: 32px;
 
- 
 //variable font weight
 $fw-0: 300;
 $fw-1: 400;
@@ -52,11 +50,10 @@ $mg-1: 8px;
 $mg-2: 20px;
 
 //break points
-$breakpoints:(
-    'ex-extra-large': 1232px,
-    'extra-large': 1200px,
-    'large' : 992px,
-    'medium' : 768px,
-    'small' : 576px,
-)
-
+$breakpoints: (
+  "ex-extra-large": 1232px,
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 891px,
+  "small": 576px,
+);

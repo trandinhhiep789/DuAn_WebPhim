@@ -2,13 +2,17 @@
   //   position: relative;
   .feedBack {
     position: absolute;
-    right: 10%;
-    bottom: 3%;
-    position: fixed;
-    z-index: 2000; //??
+    right: 15%;
+    bottom: 40%;
+    // position: fixed;
+    // z-index: 0; //??
     .nutFeedback {
-      width: 100px;
-      height: 100px;
+      i {
+        font-size: 35px;
+      }
+
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
 
       box-shadow: 0 5px 15px -5px #00000070;
@@ -33,14 +37,16 @@
   .chaCuaFeedBack {
     //   position: relative;
     .feedBack {
+      position: absolute;
+      right: 10%;
       .nutFeedback {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         .chuFeedback {
           font-size: 32px;
         }
         .fb {
-          font-size: 14px;
+          font-size: 10px;
         }
       }
     }
@@ -51,11 +57,34 @@
   .chaCuaFeedBack {
     //   position: relative;
     .feedBack {
+      position: absolute;
+      top: 10%;
       .nutFeedback {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: 70px;
         .chuFeedback {
           font-size: 22px;
+        }
+        .fb {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .chaCuaFeedBack {
+    //   position: relative;
+
+    .feedBack {
+      position: absolute;
+      top: 8%;
+      .nutFeedback {
+        width: 65px;
+        height: 65px;
+        .chuFeedback {
+          font-size: 17px;
         }
         .fb {
           font-size: 11px;
@@ -68,15 +97,16 @@
 @include responsive("small") {
   .chaCuaFeedBack {
     //   position: relative;
+
     .feedBack {
       .nutFeedback {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
         .chuFeedback {
           font-size: 19px;
         }
         .fb {
-          font-size: 11px;
+          font-size: 8px;
         }
       }
     }
