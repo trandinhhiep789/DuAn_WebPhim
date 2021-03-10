@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import { ACCESSTOKEN } from '../../../Util/Config'
 import { useDispatch } from 'react-redux';
+import Swal from 'sweetalert2'
 
 
 
@@ -47,11 +48,10 @@ export default function ThemNguoiDung() {
             method: 'POST',
         }).then(res => {
             console.log(res)
-            alert("them thanh cong")
-            console.log("ssssssssssssssssssssssssssssssssssss")
+            Swal.fire('Thông báo', 'Thêm người dùng thành công', 'success')
+            e.target.reset()
         }).catch(err => {
-            alert(err.response.data)
-            alert("Thêm người dùng thất bại")
+            Swal.fire('Thông báo', err.response.data, 'error')
             console.log("Thêm người dùng thất bại")
         })
 

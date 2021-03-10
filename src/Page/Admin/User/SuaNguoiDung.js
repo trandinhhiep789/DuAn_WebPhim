@@ -122,14 +122,11 @@ export default function SuaNguoiDung() {
             method: 'PUT',
         }).then(res => {
             console.log(res)
-            alert("Cập nhật người dùng thành công")
+            Swal.fire('Thông báo', 'Sửa người dùng thành công', 'success')
 
         }).catch(err => {
             console.log(err.response.data)
-            alert(err.response.data)
-            alert("Cập người dùng thất bại")
-
-
+            Swal.fire('Thông báo', err.response.data, 'error')
             console.log("Cập nhật người dùng thất bại")
         })
 

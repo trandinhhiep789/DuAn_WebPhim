@@ -3,7 +3,9 @@ import React from 'react'
 export const Film = ({ posts, loading, userLogin, onUpdate, onDelete }) => {
 
     if (loading) {
-        return <h2>loading...</h2>
+        return <div class="spinner-border text-danger" role="status">
+        {/* <span class="visually-hidden">Loading...</span> */}
+      </div>
     }
 
     return (

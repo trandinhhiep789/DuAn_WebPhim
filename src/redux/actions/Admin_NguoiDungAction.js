@@ -4,6 +4,8 @@ import Axios from 'axios'
 import { history } from '../../Util/history'
 import swal from 'sweetalert2'
 
+import Swal from 'sweetalert2'
+
 
 export const dangNhapAction = (userLogin) => {
     return dispatch => {
@@ -54,18 +56,17 @@ export const deleteUser = (maTaiKhoan, maLoaiNguoiDung) => {
     return async (dispatch) => {
         // <h4>aaaaaaaaaa</h4>
         if (maLoaiNguoiDung === "QuanTri") {
-            alert(maTaiKhoan)
+            // alert(maTaiKhoan)
 
             return Axios.delete(`https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${maTaiKhoan}`,
                 { data: { source: maTaiKhoan }, headers: { Authorization: 'Bearer ' + localStorage.getItem(ACCESSTOKEN) } })
                 .then(() => {
-                    alert("thanh cong")
+                    Swal.fire('Thông báo', 'Xóa thành công', 'success')
                     dispatch({
                         data: maTaiKhoan,
                     })
                 }).catch((err) => {
-                    console.log("Lỗi API (xóa thành công)")
-                    // console.log(err.response.data)
+                    Swal.fire('Thông báo', err.response, 'error')
                 })
         }
         else {

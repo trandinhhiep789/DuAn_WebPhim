@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
+import Swal from 'sweetalert2'
 // import DrawerForm from './DrawerForm'
 
 // import DatePicker from "react-datepicker";
@@ -82,11 +83,12 @@ export default function ThemFilm() {
         }).then(res => {
             console.log(res)
             console.log("Thêm phim thành công")
-            alert("Thêm phim thành công")
+            Swal.fire('Thông báo', 'Thêm phim thành công', 'success')
+            e.target.reset()
+
         }).catch(err => {
             console.log("Thêm phim thất bại")
-            alert("Thêm phim thất bại")
-            alert(err.response.data)
+            Swal.fire('Thông báo', err.response.data, 'error')
         })
 
     }

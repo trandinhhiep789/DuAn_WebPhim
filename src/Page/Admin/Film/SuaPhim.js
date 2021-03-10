@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import Axios from 'axios'
 import { ACCESSTOKEN } from '../../../Util/Config'
 
+import Swal from 'sweetalert2'
+
 export default function SuaPhim() {
 
     const [phim, setPhim] = useState({
@@ -159,12 +161,12 @@ export default function SuaPhim() {
             data: form_data
         }).then(res => {
             console.log(res)
-            alert("Cập nhật phim thành công")
+            Swal.fire('Thông báo', 'Cập nhật thành công', 'success')
 
         }).catch(err => {
             console.log(err.response.data)
             // alert(err.response.data)
-            alert("Cập phim thất bại")
+            Swal.fire('Thông báo',err.text, 'error')
         })
 
     }

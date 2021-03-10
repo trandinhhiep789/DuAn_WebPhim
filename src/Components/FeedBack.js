@@ -36,8 +36,9 @@ export default function FeedBack() {
 
 
         if (user.taiKhoan == "") {
-            alert('ban can phai danh nhap trc!')
-            history.push('/dangnhap')
+            // alert('ban can phai danh nhap trc!')
+            Swal.fire('Thông báo', 'Bạn cần phải đăng nhập trước', 'error')
+            // history.push('/dangnhap')
         }
         else {
             emailjs.sendForm('service_4jtx9bp', 'template_v80qs64', e.target, 'user_nkVTtGK1ffFC3r91hyDiR')

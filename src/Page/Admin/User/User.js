@@ -4,7 +4,9 @@ import SuaNguoiDung from './SuaNguoiDung'
 export const User = ({ posts, loading, userLogin, onDelete, onUpdate }) => {
 
     if (loading) {
-        return <h2>loading...</h2>
+        return<div class="spinner-border text-danger" role="status">
+        {/* <span class="visually-hidden">Loading...</span> */}
+      </div>
     }
 
 

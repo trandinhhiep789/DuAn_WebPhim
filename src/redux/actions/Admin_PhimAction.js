@@ -2,6 +2,7 @@ import { LAY_DANH_SACH_PHIM_ACTION } from "../const/QuanLyPhimConst"
 import Axios from 'axios'
 import { configure } from "@testing-library/react"
 import { DOMAIN, USER_LOGIN, ACCESSTOKEN } from '../../Util/Config'
+import Swal from 'sweetalert2'
 
 
 
@@ -119,8 +120,6 @@ export const deleteFilm = (maPhim, maLoaiNguoiDung) => {
 
 
     return async (dispatch) => {
-        alert('access nha')
-        alert(localStorage.getItem(ACCESSTOKEN));
         if (maLoaiNguoiDung === "QuanTri") {
 
             // dispatch({
@@ -141,11 +140,12 @@ export const deleteFilm = (maPhim, maLoaiNguoiDung) => {
             // })
             // console.log(data)
 
-            alert(maPhim)
+            // alert(maPhim)
 
             return Axios.delete(`https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=${maPhim}`,
                 { data: { source: maPhim }, headers: { Authorization: 'Bearer ' + localStorage.getItem(ACCESSTOKEN) } })
                 .then(() => {
+                    Swal.fire('Thông báo', 'Xóa thành công', 'success')
                     dispatch({
                         data: maPhim,
                         // header: { 'Authorization': 'Bearer ' + localStorage.getItem(ACCESSTOKEN) }
@@ -157,7 +157,7 @@ export const deleteFilm = (maPhim, maLoaiNguoiDung) => {
                     // errorPayLoad['status'] = err.response.status
 
                     // dispatch(deleteFilmError(errorPayLoad))
-
+                    Swal.fire('Thông báo',err.response.data, 'error')
                     console.log("Lỗi API (xóa thành công)")
                 })
 
@@ -174,7 +174,7 @@ export const updateFilm = (maPhim, tenPhim, biDanh, trailer, hinhAnh, moTa, maNh
     return async (dispatch) => {
         if (maLoaiNguoiDunguser === "QuanTri") {
             let filmupdate = { maPhim, tenPhim, biDanh, trailer, hinhAnh, moTa, maNhom, ngayKhoiChieu, danhGia }
-            console.log("userupdate:")
+            console.log("filmupdate:")
             console.log(filmupdate)
             dispatch({
                 type: 'UpdateFlim',
